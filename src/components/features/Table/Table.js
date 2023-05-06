@@ -2,7 +2,7 @@ import { Card, Row, Col, Button} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-const Table = () => {
+const Table = ({status ,id}) => {
 
   return (
     <Card>
@@ -10,10 +10,10 @@ const Table = () => {
         <Row>
           <Row className="align-items-end mb-3">
             <Col className="col-2 d-flex align-items-end justify-content-between">
-              <h2 className="mb-0">Table 1</h2>
+              <h2 className="mb-0">Table {id}</h2>
             </Col>
             <Col className="col-4">
-              <strong>Status:</strong> busy {""}
+              <strong>Status:</strong> {status} {""}
             </Col>
             <Col className="col-6 d-flex justify-content-end">
               <Link to={"/edittable/"}>
