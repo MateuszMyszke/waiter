@@ -1,16 +1,25 @@
+import React from 'react';
+import Table from '../../features/Table';
 import { useSelector } from 'react-redux';
-import Table from '../../features/Table/Table';
 import { getAllTables } from '../../../redux/tablesRedux';
+import Spinner from "react-bootstrap/Spinner";
 
-const Home = ()=> {
+const Home = () => {
 
-  const tables = useSelector(getAllTables);
+const tables = useSelector(getAllTables)
 
-  return(
+console.log(tables.length)
+if(tables.length == 0) return (<Spinner/>)
+
+  return (
     <div>
-      <h1>All tables</h1>
+      <h1 className="m-2">All tables</h1>
       {tables.map((table, index) => (
-        <Table key={index} id={table.id} status={table.status}/>
+        <Table
+        key={index} 
+        id={table.id}
+        status={table.status}
+        />
       ))}
     </div>
   );

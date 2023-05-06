@@ -1,9 +1,15 @@
+import React from 'react';
+
+
+
+
 const Footer = () => {
-  return(
-    <footer className='text-center text-muted py-4'>
-      <p>Copyright © BlogApp 2023</p>
-    </footer>
-  );
-};
+  return (
+  <div className="text-center text-muted">
+    Copyright  © BlogApp 2023
+  </div>
+  ) 
+}
+
 
 export default Footer;

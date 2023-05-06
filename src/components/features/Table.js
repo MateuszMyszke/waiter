@@ -1,8 +1,7 @@
-import { Card, Row, Col, Button} from "react-bootstrap";
+import {  Button, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
-const Table = ({status ,id}) => {
+const Table = ({status, id}) => {
 
   return (
     <Card>
@@ -16,10 +15,10 @@ const Table = ({status ,id}) => {
               <strong>Status:</strong> {status} {""}
             </Col>
             <Col className="col-6 d-flex justify-content-end">
-              <Link to={"/edittable/"}>
-              <Button variant="primary" size="sm">
-                Show more
-              </Button>
+              <Link to={"/edittable/" + id}>
+                <Button variant="primary" size="sm">
+                 Show more
+                </Button>
               </Link>
             </Col>
           </Row>
